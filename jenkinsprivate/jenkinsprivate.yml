@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkinsprivate
+spec:
+  containers:
+  - name: envars-test-container
+    image: sanjay0288/myjenkinsprivate:5
+    

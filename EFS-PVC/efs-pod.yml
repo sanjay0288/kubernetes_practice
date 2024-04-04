@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: my-image
+      volumeMounts:
+        - name: config-volume
+          mountPath: "/var/www/html"
+  volumes:
+    - name: config-volume
+      persistentVolumeClaim:
+        claimName: efs-pvc
